@@ -1,3 +1,11 @@
+This is a fork of [chromaprint](https://acoustid.org/chromaprint), packaged for
+Zig. Unnecessary files have been deleted, and the build system has been
+replaced with `build.zig`.
+
+Original README follows:
+
+--------------------------------------------------------------------------------
+
 # Chromaprint
 
 Chromaprint is an audio fingerprint library developed for the [AcoustID][acoustid] project. It's designed to identify near-identical audio
