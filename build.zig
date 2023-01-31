@@ -2,13 +2,18 @@ const std = @import("std");
 
 pub fn build(b: *std.build.Builder) void {
     const target = b.standardTargetOptions(.{});
-    const mode = b.standardReleaseOptions();
+    const optimize = b.standardOptimizeOption(.{});
 
-    const ffmpeg_dep = b.dependency("ffmpeg", .{});
+    const ffmpeg_dep = b.dependency("ffmpeg", .{
+        .target = target,
+        .optimize = optimize,
+    });
 
-    const lib = b.addStaticLibrary("chromaprint", null);
-    lib.setTarget(target);
-    lib.setBuildMode(mode);
+    const lib = b.addStaticLibrary(.{
+        .name = "chromaprint",
+        .target = target,
+        .optimize = optimize,
+    });
     lib.linkLibrary(ffmpeg_dep.artifact("ffmpeg"));
     lib.linkLibC();
     lib.linkLibCpp();
