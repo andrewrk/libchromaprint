@@ -18,7 +18,9 @@ pub fn build(b: *std.build.Builder) void {
     lib.linkLibC();
     lib.linkLibCpp();
     lib.addIncludePath("src");
-    lib.addConfigHeader(b.addConfigHeader(.{ .path = "config.h.in" }, .cmake, .{
+    lib.addConfigHeader(b.addConfigHeader(.{
+        .style = .{ .cmake = .{ .path = "config.h.in" } },
+    }, .{
         .HAVE_ROUND = 1,
         .HAVE_LRINTF = 1,
         .HAVE_AV_PACKET_UNREF = 1,
