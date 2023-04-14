@@ -76,6 +76,6 @@ pub fn build(b: *std.build.Builder) void {
         "-DCHROMAPRINT_NODLL",
         "-D_GNU_SOURCE",
     });
-    lib.install();
     lib.installHeader("src/chromaprint.h", "chromaprint.h");
+    b.installArtifact(lib);
 }
