@@ -17,7 +17,7 @@ pub fn build(b: *std.build.Builder) void {
     lib.linkLibrary(ffmpeg_dep.artifact("ffmpeg"));
     lib.linkLibC();
     lib.linkLibCpp();
-    lib.addIncludePath("src");
+    lib.addIncludePath(.{ .path = "src" });
     lib.addConfigHeader(b.addConfigHeader(.{
         .style = .{ .cmake = .{ .path = "config.h.in" } },
     }, .{
