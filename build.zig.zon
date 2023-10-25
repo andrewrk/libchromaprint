@@ -1,11 +1,11 @@
 .{
     .name = "libchromaprint",
-    .version = "1.5.3-1",
+    .version = "1.5.3-2",
 
     .dependencies = .{
         .ffmpeg = .{
-            .url = "https://github.com/andrewrk/ffmpeg/archive/27a198a581d2c40753ab37a9635f373aad61904e.tar.gz",
-            .hash = "1220c439bd3d820085113b97391d85453440468b395cab3729cd1ab3b262488db5b2",
+            .url = "https://github.com/andrewrk/ffmpeg/archive/cfcbf587e9cb3bb0c94e448bf79a0ddc68f37896.tar.gz",
+            .hash = "1220b2910a4f18787392123002e949eb2463739031fb7c8e1d0097b95fe672cf6300",
         },
     },
 
