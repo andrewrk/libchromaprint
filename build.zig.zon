@@ -4,8 +4,8 @@
 
     .dependencies = .{
         .ffmpeg = .{
-            .url = "https://github.com/andrewrk/ffmpeg/archive/6.1.1-1.tar.gz",
-            .hash = "1220ca9ac895beccdf74b35f9252376877106a894287f1587b46989d1f6ff2442cae",
+            .url = "https://github.com/andrewrk/ffmpeg/archive/150fb9449a038ef45cdb88259ded97462c7354ab.tar.gz",
+            .hash = "1220e5bb0972b1f7e009566ddcf705d0b5ba049a4616f0a65fd97295e64fe0b3022a",
         },
     },
 
